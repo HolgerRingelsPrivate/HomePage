@@ -1,0 +1,114 @@
+[INFO ] [2025-07-31T11:57:53,274] [main] [common.service.app.access.AppDirectoryService] - Access application.properties
+[INFO ] [2025-07-31T11:57:53,365] [main] [common.service.app.access.AppDirectoryService] - Access application.properties
+[INFO ] [2025-07-31T11:57:53,368] [main] [common.service.app.access.AppDirectoryService] - Access application.properties
+[INFO ] [2025-07-31T11:57:53,377] [main] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[INFO ] [2025-07-31T11:57:53,428] [main] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3370f42
+[INFO ] [2025-07-31T11:57:53,428] [main] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[INFO ] [2025-07-31T11:57:53,441] [main] [common.service.db.model.DbModelService] - 
+[INFO ] [2025-07-31T11:57:53,441] [main] [common.service.db.model.DbModelService] - ----- Searching for Provided Schematas Definitions -----
+[INFO ] [2025-07-31T11:57:53,441] [main] [common.service.db.model.DbModelService] - 
+[INFO ] [2025-07-31T11:57:53,442] [main] [common.service.app.access.AppDirectoryService] - Access this path in app-directory: '/model/schematas'
+[INFO ] [2025-07-31T11:57:53,453] [main] [common.service.db.model.DbModelService] - Provided Schematas found in src/main/resources/public/app/model/schematas/provided_schematas.json
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************************************************************************
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - Identified [schema, version] in Database                             : homepage, 1.0.0
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - Schemata Match with Database                                         : homepage, 1.0.0
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - Database Action: Start Refresh Error Codes and Codetables for Schema : homepage, 1.0.0
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************************************************************************
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,455] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - refreshErrorCodesAndCodeTablesForThisApp
+[INFO ] [2025-07-31T11:57:53,456] [main] [common.service.app.access.AppDirectoryService] - Access this path in app-directory: '/model'
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - *     CodeTableItems (create)     (0)
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,471] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,472] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T11:57:53,472] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - *     CodeTableItems (update)     (0)
+[INFO ] [2025-07-31T11:57:53,472] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T11:57:53,472] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,472] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,473] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T11:57:53,473] [main] [common.service.app.access.AppDirectoryService] - Access this path in app-directory: '/model'
+[INFO ] [2025-07-31T11:57:53,658] [main] [common.service.env.PomUtil] - Try to access pom.xml using this path : pom.xml
+[INFO ] [2025-07-31T11:57:53,668] [main] [common.service.env.PomUtil] - ... found
+[INFO ] [2025-07-31T11:57:53,668] [main] [restserver.HomePageRestServer] - Starting in Development Mode
+[INFO ] [2025-07-31T11:57:53,802] [main] [restserver.HomePageRestServer] - Starting HomePageRestServer using Java 21.0.1 with PID 16139 (/Users/holgerringels/git/HomePage/my-homepage-rest-server/target/classes started by holgerringels in /Users/holgerringels/git/HomePage/my-homepage-rest-server)
+[INFO ] [2025-07-31T11:57:53,803] [main] [restserver.HomePageRestServer] - No active profile set, falling back to 1 default profile: "default"
+[INFO ] [2025-07-31T11:57:54,231] [main] [org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory] - Server initialized with port: 8080
+[INFO ] [2025-07-31T11:57:54,233] [main] [org.eclipse.jetty.server.Server] - jetty-12.0.5; built: 2023-12-18T14:06:32.502Z; git: 3aed62e4959bb8c01f5975fe81e078e3ff626126; jvm 21.0.1+12-LTS-29
+[INFO ] [2025-07-31T11:57:54,249] [main] [org.eclipse.jetty.server.handler.ContextHandler.application] - Initializing Spring embedded WebApplicationContext
+[INFO ] [2025-07-31T11:57:54,249] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 429 ms
+[INFO ] [2025-07-31T11:57:54,274] [main] [org.eclipse.jetty.session.DefaultSessionIdManager] - Session workerName=node0
+[INFO ] [2025-07-31T11:57:54,276] [main] [org.eclipse.jetty.server.handler.ContextHandler] - Started osbwej.JettyEmbeddedWebAppContext@51d0ec6f{application,/,b=file:/private/var/folders/zl/_l1wmyc94xv2h3z45p52hqn80000gn/T/jetty-docbase.8080.14528553506282495314/,a=AVAILABLE,h=oeje10s.SessionHandler@7bee8621{STARTED}}
+[INFO ] [2025-07-31T11:57:54,276] [main] [org.eclipse.jetty.ee10.servlet.ServletContextHandler] - Started osbwej.JettyEmbeddedWebAppContext@51d0ec6f{application,/,b=file:/private/var/folders/zl/_l1wmyc94xv2h3z45p52hqn80000gn/T/jetty-docbase.8080.14528553506282495314/,a=AVAILABLE,h=oeje10s.SessionHandler@7bee8621{STARTED}}
+[INFO ] [2025-07-31T11:57:54,277] [main] [org.eclipse.jetty.server.Server] - Started oejs.Server@7af443a3{STARTING}[12.0.5,sto=0] @1284ms
+[INFO ] [2025-07-31T11:57:54,397] [main] [org.eclipse.jetty.server.handler.ContextHandler.application] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] [2025-07-31T11:57:54,397] [main] [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+[INFO ] [2025-07-31T11:57:54,398] [main] [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+[INFO ] [2025-07-31T11:57:54,405] [main] [org.eclipse.jetty.server.AbstractConnector] - Started ServerConnector@30afda8c{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[INFO ] [2025-07-31T11:57:54,405] [main] [org.springframework.boot.web.embedded.jetty.JettyWebServer] - Jetty started on port 8080 (http/1.1) with context path '/'
+[INFO ] [2025-07-31T11:57:54,409] [main] [restserver.HomePageRestServer] - Started HomePageRestServer in 0.741 seconds (process running for 1.416)
+[INFO ] [2025-07-31T12:03:20,716] [SpringApplicationShutdownHook] [org.eclipse.jetty.server.AbstractConnector] - Stopped ServerConnector@30afda8c{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[INFO ] [2025-07-31T12:03:20,718] [SpringApplicationShutdownHook] [org.eclipse.jetty.server.Server] - Stopped oejs.Server@7af443a3{STOPPING}[12.0.5,sto=0]
+[INFO ] [2025-07-31T12:03:20,719] [SpringApplicationShutdownHook] [org.eclipse.jetty.server.handler.ContextHandler.application] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] [2025-07-31T12:03:20,720] [SpringApplicationShutdownHook] [org.eclipse.jetty.ee10.servlet.ServletContextHandler] - Stopped osbwej.JettyEmbeddedWebAppContext@51d0ec6f{application,/,b=file:/private/var/folders/zl/_l1wmyc94xv2h3z45p52hqn80000gn/T/jetty-docbase.8080.14528553506282495314/,a=AVAILABLE,h=oeje10s.SessionHandler@7bee8621{STOPPED}}
+[INFO ] [2025-07-31T12:04:18,973] [main] [common.service.app.access.AppDirectoryService] - Access application.properties
+[INFO ] [2025-07-31T12:04:19,057] [main] [common.service.app.access.AppDirectoryService] - Access application.properties
+[INFO ] [2025-07-31T12:04:19,058] [main] [common.service.app.access.AppDirectoryService] - Access application.properties
+[INFO ] [2025-07-31T12:04:19,066] [main] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[INFO ] [2025-07-31T12:04:19,104] [main] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@53251a66
+[INFO ] [2025-07-31T12:04:19,105] [main] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[INFO ] [2025-07-31T12:04:19,116] [main] [common.service.db.model.DbModelService] - 
+[INFO ] [2025-07-31T12:04:19,116] [main] [common.service.db.model.DbModelService] - ----- Searching for Provided Schematas Definitions -----
+[INFO ] [2025-07-31T12:04:19,116] [main] [common.service.db.model.DbModelService] - 
+[INFO ] [2025-07-31T12:04:19,116] [main] [common.service.app.access.AppDirectoryService] - Access this path in app-directory: '/model/schematas'
+[INFO ] [2025-07-31T12:04:19,128] [main] [common.service.db.model.DbModelService] - Provided Schematas found in src/main/resources/public/app/model/schematas/provided_schematas.json
+[INFO ] [2025-07-31T12:04:19,129] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,129] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************************************************************************
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - Identified [schema, version] in Database                             : homepage, 1.0.0
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - Schemata Match with Database                                         : homepage, 1.0.0
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - Database Action: Start Refresh Error Codes and Codetables for Schema : homepage, 1.0.0
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************************************************************************
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - refreshErrorCodesAndCodeTablesForThisApp
+[INFO ] [2025-07-31T12:04:19,130] [main] [common.service.app.access.AppDirectoryService] - Access this path in app-directory: '/model'
+[INFO ] [2025-07-31T12:04:19,142] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,142] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - *     CodeTableItems (create)     (0)
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - *     CodeTableItems (update)     (0)
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - ****************************************
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,143] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,144] [main] [common.service.rel.db.postgresql.PostgreSqlSchemaHandleService] - 
+[INFO ] [2025-07-31T12:04:19,145] [main] [common.service.app.access.AppDirectoryService] - Access this path in app-directory: '/model'
+[INFO ] [2025-07-31T12:04:19,376] [main] [common.service.env.PomUtil] - Try to access pom.xml using this path : pom.xml
+[INFO ] [2025-07-31T12:04:19,385] [main] [common.service.env.PomUtil] - ... found
+[INFO ] [2025-07-31T12:04:19,385] [main] [restserver.HomePageRestServer] - Starting in Development Mode
+[INFO ] [2025-07-31T12:04:19,512] [main] [restserver.HomePageRestServer] - Starting HomePageRestServer using Java 21.0.1 with PID 16981 (/Users/holgerringels/git/HomePage/my-homepage-rest-server/target/classes started by holgerringels in /Users/holgerringels/git/HomePage/my-homepage-rest-server)
+[INFO ] [2025-07-31T12:04:19,513] [main] [restserver.HomePageRestServer] - No active profile set, falling back to 1 default profile: "default"
+[INFO ] [2025-07-31T12:04:19,914] [main] [org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory] - Server initialized with port: 8080
+[INFO ] [2025-07-31T12:04:19,916] [main] [org.eclipse.jetty.server.Server] - jetty-12.0.5; built: 2023-12-18T14:06:32.502Z; git: 3aed62e4959bb8c01f5975fe81e078e3ff626126; jvm 21.0.1+12-LTS-29
+[INFO ] [2025-07-31T12:04:19,930] [main] [org.eclipse.jetty.server.handler.ContextHandler.application] - Initializing Spring embedded WebApplicationContext
+[INFO ] [2025-07-31T12:04:19,930] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 402 ms
+[INFO ] [2025-07-31T12:04:19,952] [main] [org.eclipse.jetty.session.DefaultSessionIdManager] - Session workerName=node0
+[INFO ] [2025-07-31T12:04:19,955] [main] [org.eclipse.jetty.server.handler.ContextHandler] - Started osbwej.JettyEmbeddedWebAppContext@747835f5{application,/,b=file:/private/var/folders/zl/_l1wmyc94xv2h3z45p52hqn80000gn/T/jetty-docbase.8080.6362993907778554938/,a=AVAILABLE,h=oeje10s.SessionHandler@594131f2{STARTED}}
+[INFO ] [2025-07-31T12:04:19,955] [main] [org.eclipse.jetty.ee10.servlet.ServletContextHandler] - Started osbwej.JettyEmbeddedWebAppContext@747835f5{application,/,b=file:/private/var/folders/zl/_l1wmyc94xv2h3z45p52hqn80000gn/T/jetty-docbase.8080.6362993907778554938/,a=AVAILABLE,h=oeje10s.SessionHandler@594131f2{STARTED}}
+[INFO ] [2025-07-31T12:04:19,956] [main] [org.eclipse.jetty.server.Server] - Started oejs.Server@5b000fe6{STARTING}[12.0.5,sto=0] @1268ms
+[INFO ] [2025-07-31T12:04:20,065] [main] [org.eclipse.jetty.server.handler.ContextHandler.application] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] [2025-07-31T12:04:20,065] [main] [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+[INFO ] [2025-07-31T12:04:20,065] [main] [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 0 ms
+[INFO ] [2025-07-31T12:04:20,073] [main] [org.eclipse.jetty.server.AbstractConnector] - Started ServerConnector@404be22a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[INFO ] [2025-07-31T12:04:20,073] [main] [org.springframework.boot.web.embedded.jetty.JettyWebServer] - Jetty started on port 8080 (http/1.1) with context path '/'
+[INFO ] [2025-07-31T12:04:20,077] [main] [restserver.HomePageRestServer] - Started HomePageRestServer in 0.692 seconds (process running for 1.389)
+[INFO ] [2025-07-31T12:04:38,092] [SpringApplicationShutdownHook] [org.eclipse.jetty.server.AbstractConnector] - Stopped ServerConnector@404be22a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[INFO ] [2025-07-31T12:04:38,093] [SpringApplicationShutdownHook] [org.eclipse.jetty.server.Server] - Stopped oejs.Server@5b000fe6{STOPPING}[12.0.5,sto=0]
+[INFO ] [2025-07-31T12:04:38,094] [SpringApplicationShutdownHook] [org.eclipse.jetty.server.handler.ContextHandler.application] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] [2025-07-31T12:04:38,095] [SpringApplicationShutdownHook] [org.eclipse.jetty.ee10.servlet.ServletContextHandler] - Stopped osbwej.JettyEmbeddedWebAppContext@747835f5{application,/,b=file:/private/var/folders/zl/_l1wmyc94xv2h3z45p52hqn80000gn/T/jetty-docbase.8080.6362993907778554938/,a=AVAILABLE,h=oeje10s.SessionHandler@594131f2{STOPPED}}

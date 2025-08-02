@@ -1,0 +1,59 @@
+{
+  "swagger": "2.0",
+
+	"paths": {
+	
+		"/api/carbonplay/fusion_multiple_objects/something": {
+
+			"get": {
+		        "operationId": "fusion_multiple_objects_something",
+        		"summary": "Something dealing with multiple objects",
+        		"tags" : ["Fusion Multiple Objects"],
+        		"produces": [
+       			   "application/json"
+        		],
+       			 "consumes": [
+          			"application/json"
+        		],
+        		
+        		"parameters": [
+        				{
+				            "name": "appHeaderMetaData",
+				            "in": "header",
+				            "description": "Meta Data",
+				            "required": false,
+				            "type": "string"
+				        },
+				        {
+				            "name": "appHeaderProcessId",
+				            "in": "header",
+				            "description": "Process ID",
+				            "required": false,
+				            "type": "string"
+				        }
+        		],
+        		
+        		
+        		
+        		 "responses": {
+			          "200": {
+           				 "description": "Something has been done with multiple objects"
+          		 		  },
+          		 	  "500": {
+	           				 "description": "Internal Server Error"
+          		 		  }        
+               	}        		
+			}
+
+			
+		}
+		
+	 },
+
+	"consumes": [
+		"application/json"
+	]
+  
+  
+}
+

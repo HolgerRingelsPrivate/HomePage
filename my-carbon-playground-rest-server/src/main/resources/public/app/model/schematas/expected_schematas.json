@@ -1,0 +1,13 @@
+{
+  "schematas": [
+    {
+      "schemata": "appsys",
+      "version": "1.0.0"
+    },
+    {
+      "schemata": "carbonplay",
+      "version": "1.0.0"
+    }	  
+  ]
+}
+

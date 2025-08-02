@@ -1,0 +1,42 @@
+{
+  "swagger": "2.0",
+
+	"paths": {
+	
+		"/api/homepage/Common/config": {
+
+			"get": {
+		        "operationId": "commonConfig",
+        		"summary": "Deliver Info about App's Common",
+        		"tags" : ["Config"],
+        		"produces": [
+       			   "application/json"
+        		],
+       			 "consumes": [
+          			"application/json"
+        		],
+        		
+        		 "responses": {
+			          "200": {
+           				 "description": "Info about App's Common has been delivered"
+          		 		  },
+          		 	  "500": {
+	           				 "description": "Internal Server Error"
+          		 		  }        
+               	}        		
+			}
+
+			
+			
+		}			
+
+		
+	 },
+
+	"consumes": [
+		"application/json"
+	]
+  
+  
+}
+

@@ -1,0 +1,4 @@
+echo
+echo start-app-to-debug
+echo
+java -Xdebug -agentlib:jdwp=transport=dt_socket,address=4$MODULE_PORT,server=y,suspend=y -jar app.jar

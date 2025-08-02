@@ -1,0 +1,13 @@
+#
+# --------------------------------------------------------------------------------
+#  user_interface UP command 
+#
+# --------------------------------------------------------------------------------
+#	
+#!/bin/sh
+#foreach($ENTRY in $YAML_BUILD.getDeployables())
+docker run -d \
+-p $ENTRY.getPort():3000 \
+--name $ENTRY.getGroupID()_$ENTRY.getVersion() \
+$ENTRY.getGroupID():$ENTRY.getVersion()
+#end

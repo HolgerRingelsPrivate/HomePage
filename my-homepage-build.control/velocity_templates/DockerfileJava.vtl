@@ -1,0 +1,22 @@
+##
+## Local Velocity variables:
+##
+#set ($Local_dotJar = ".jar")
+##
+##
+#
+#
+# From BUILD Control 
+#
+# Load base image
+FROM openjdk:21-jdk-buster
+
+RUN apt-get update
+RUN apt-get install file --assume-yes
+RUN apt-get install nano --assume-yes
+
+WORKDIR /usr/src/myapp
+COPY $RELEASE_FOLDER/ /usr/src/myapp
+
+# Executing the app
+CMD ["java","-jar","app.jar"]

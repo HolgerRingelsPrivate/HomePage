@@ -1,0 +1,26 @@
+#
+# --------------------------------------------------------------------------------
+#  rest_server UP command 
+#
+#  - please set volumes based on requirements
+#  - please remember database-routing
+# --------------------------------------------------------------------------------
+#
+#!/bin/sh
+#foreach($ENTRY in $YAML_BUILD.getDeployables())
+docker run -d \
+-p $ENTRY.getPort():8080 \
+-v /Users/holgerringels/Documents/Container/ContainerData/mediathek:/usr/src/appData \
+-v /Users/holgerringels/Documents/Container/ContainerData/mediathek/transfer:/usr/src/appDataTransfer \
+-e spring.datasource.url=jdbc:postgresql://[SERVER_NOT_LOCALHOST]:[PORT_NOT_LOCALHOST]/[DATABASE_NAME] \
+-e spring.datasource.username=postgres  \
+-e spring.datasource.password=password  \
+-e APP_IS_DATABSE_MASTER=true \
+-e APP_VOLUME=/usr/src/appData \
+-e APP_VOLUME_TRANSFER=/usr/src/appDataTransfer \
+-e APP_DIR_WORKDIR=/usr/src/appData/work \
+-e APP_DIR_LOGGING=/usr/src/appData/logs \
+-e APP_DIR_TRANSFER=/usr/src/appDataTransfer \
+--name $ENTRY.getGroupID()_$ENTRY.getVersion() \
+$ENTRY.getGroupID():$ENTRY.getVersion()
+#end
