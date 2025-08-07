@@ -22,7 +22,6 @@ class EntityDisplaySelected extends Component {
 
     return (
       <div>
-        &nbsp;<br/>
         <Examples
           entityToDisplay ={entityToDisplay}
         />

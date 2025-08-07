@@ -1,5 +1,8 @@
 package restserver.controller;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
 import org.slf4j.Logger;
@@ -7,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -52,7 +54,10 @@ public class TreeController {
 
 			//identify root-nodes
 			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
-
+			
+			//sort array by label
+			Arrays.sort(array, Comparator.comparing(node -> node.getLabel()));
+			
 			//<==========
 
 			result =  new ResponseEntity<>(array,HttpStatus.OK);

@@ -23,22 +23,24 @@ public class SimpleDummyDataGenerator {
 
 		int iVertexId = 0; //VertexID counts "1", "2", "3", ...
 		
-		PojoJGraphtTreeNode pojoJGraphtTreeNode01 = createNode("A_id", 	"A", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode02 = createNode("B_id", 	"B", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode03 = createNode("A1_id", "A1", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode04 = createNode("A2_id", "A2", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode05 = createNode("B1_id", "B1", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode06 = createNode("B2_id", "B2", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode07 = createNode("x_id", 	"x", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode08 = createNode("y_id", 	"y", 				Integer.toString(++iVertexId)); //8th and 9th node:  create the same payload (entityID = "y"),
-		PojoJGraphtTreeNode pojoJGraphtTreeNode09 = createNode("y_id", 	"y", 				Integer.toString(++iVertexId)); //but for different TreeNode-iDs (to add "y_label" 1x to "A2" and  1x to "B1")
-		PojoJGraphtTreeNode pojoJGraphtTreeNode10 = createNode("ya_id", "ya", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode11 = createNode("yb_id", "yb", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode12 = createNode("za_id",	"za", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode13 = createNode("zb_id",	"zb", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode14 = createNode("zc_id",	"zc", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode15 = createNode("C_id",	"C", 				Integer.toString(++iVertexId));
-		PojoJGraphtTreeNode pojoJGraphtTreeNode16 = createNode("D_id",	"D", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode01 = createNode("A_id", 	"A");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode02 = createNode("B_id", 	"B");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode03 = createNode("A1_id", "A1");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode04 = createNode("A2_id", "A2");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode05 = createNode("B1_id", "B1");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode06 = createNode("B2_id", "B2");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode07 = createNode("x_id", 	"x");
+		
+		PojoJGraphtTreeNode pojoJGraphtTreeNode08 = createNode("y_id", 	"y"); //these 2 nodes:  create the same payload (entityID = "y"),
+		PojoJGraphtTreeNode pojoJGraphtTreeNode09 = createNode("y_id", 	"y"); //but for different TreeNode-iDs (to add "y_label" 1x to "A2" and  1x to "B1")
+
+		PojoJGraphtTreeNode pojoJGraphtTreeNode10 = createNode("ya_id", "ya");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode11 = createNode("yb_id", "yb");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode12 = createNode("za_id",	"za");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode13 = createNode("zb_id",	"zb");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode14 = createNode("zc_id",	"zc");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode15 = createNode("C_id",	"C");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode16 = createNode("D_id",	"D");
 
 		
         // ==========================================
@@ -99,10 +101,9 @@ public class SimpleDummyDataGenerator {
 	 * This method creates a Graph-Vertex ( = PojoJGraphtTreeNode ) which holds a payload with entity - information
 	 * @param objectId ID of the Object
 	 * @param objectLabel Label of the Object
-	 * @param vertexId ID of the Vertex, which is NOT equal to ID of the Entity
 	 * @return
 	 */
-	private static PojoJGraphtTreeNode createNode(String objectId, String objectLabel, String vertexId) {
+	private static PojoJGraphtTreeNode createNode(String objectId, String objectLabel) {
 		
 		//What is an entity ... PojoEntityPayload is the payload, which answers this question 
 		PojoSimpleObjectPayload pojoObjectPayload = new PojoSimpleObjectPayload();
@@ -112,7 +113,6 @@ public class SimpleDummyDataGenerator {
 		PojoPayloadUiControl pojoPayloadUiControl = new PojoPayloadUiControl();
 				
 		PojoJGraphtTreeNode pojoTreeNode = new PojoJGraphtTreeNode();
-		pojoTreeNode.setId(vertexId);
 		pojoTreeNode.setLabel(objectLabel);
 		pojoTreeNode.setPayload(pojoObjectPayload);
 		pojoTreeNode.setUicontrol(pojoPayloadUiControl);

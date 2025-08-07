@@ -45,7 +45,7 @@ class Pattern extends Component {
 
       default:
         return (
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>?</div>
+          <div>?</div>
         );
     }
 

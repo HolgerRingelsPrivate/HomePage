@@ -56,7 +56,6 @@ class EntityNavigation extends Component {
           >
             </TreeNode>
 
-
             <TreeNode
               id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED}
               label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED)}
