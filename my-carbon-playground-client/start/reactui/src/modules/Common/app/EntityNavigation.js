@@ -47,7 +47,7 @@ class EntityNavigation extends Component {
             >
 
           <TreeNode
-              id="1-1"
+              id={CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS}
               label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS)}
               value=""
               isExpanded={true}
@@ -58,7 +58,7 @@ class EntityNavigation extends Component {
 
 
             <TreeNode
-              id="1-2"
+              id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED}
               label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED)}
               value=""
               isExpanded={true}
@@ -68,7 +68,7 @@ class EntityNavigation extends Component {
             </TreeNode>
 
             <TreeNode
-              id="1-2"
+              id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED}
               label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED)}
               value=""
               isExpanded={true}
