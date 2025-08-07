@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 import { Accordion, AccordionItem} from '@carbon/react';
+import { TreeView, TreeNode } from '@carbon/react';
+import { BareMetalServer, Settings, Error } from '@carbon/icons-react';
 import { Button } from "@carbon/react";
 
 class EntityNavigation extends Component {

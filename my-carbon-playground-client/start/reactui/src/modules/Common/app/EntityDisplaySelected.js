@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
+import Examples from './../../../modules/Examples/Examples'
 
 class EntityDisplaySelected extends Component {
   constructor(props) {
@@ -17,18 +18,14 @@ class EntityDisplaySelected extends Component {
 
   render() {
 
-    let {entityToDisplay} = this.props;
-
-
+    let {entityToDisplay} = this.props;    
 
     return (
       <div>
-        <br/>
-        <br/>
-        <p>
-        <br/>
-        EntitySelectedDisplay : {entityToDisplay}
-        </p>
+        &nbsp;<br/>
+        <Examples
+          entityToDisplay ={entityToDisplay}
+        />
       </div>
     );
   }

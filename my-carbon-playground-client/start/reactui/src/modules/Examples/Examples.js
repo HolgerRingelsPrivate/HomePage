@@ -1,0 +1,56 @@
+'use client';
+
+import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
+import * as CT_ADD_Examples from './../Common/codetable/carbonplay/CT_ADD_Examples';
+
+import ExampleButtons from './Buttons/ExampleButtons';
+import ExampleTreeSelfFilled from './TreeSelfFilled/ExampleTreeSelfFilled';
+import ExampleTreeBackendFilled from './TreeBackendFilled/ExampleTreeBackendFilled';
+
+class Pattern extends Component {
+  constructor(props) {
+    super(props);
+    // Initialize state
+    this.state = {
+      id: this.constructor.name + ' ' + uuidv4(),
+    };
+  }
+
+
+
+  render() {
+
+    let { entityToDisplay } = this.props;
+
+    switch (entityToDisplay) {
+      case CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS:
+        return (
+          <ExampleButtons/>
+        );
+        break;
+
+      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED:
+        return (
+          <ExampleTreeSelfFilled/>
+        );
+        break;
+
+      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED:
+        return (
+          <ExampleTreeBackendFilled/>
+        );
+        break;
+
+      default:
+        return (
+          <div style={{ textAlign: 'center', marginTop: '20px' }}>?</div>
+        );
+    }
+
+
+  }
+}
+
+export default Pattern;

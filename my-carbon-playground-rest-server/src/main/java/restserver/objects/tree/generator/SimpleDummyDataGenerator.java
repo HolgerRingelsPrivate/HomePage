@@ -1,0 +1,124 @@
+package restserver.objects.tree.generator;
+
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleDirectedGraph;
+
+import common.utils.jgrapht.helper.JGraphTParentChildrenPopulator;
+import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
+import common.utils.jgrapht.pojo.PojoPayloadUiControl;
+import restserver.objects.tree.object.payload.PojoSimpleObjectPayload;
+
+public class SimpleDummyDataGenerator {
+
+	/**
+	 * This method creates a tree and delivers this as graph
+	 * @return
+	 * @throws Exception
+	 */
+	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherEntitiesTree() throws Exception {
+
+        // ===========================================
+		// a) create Nodes of Pojos
+        // ===========================================
+
+		int iVertexId = 0; //VertexID counts "1", "2", "3", ...
+		
+		PojoJGraphtTreeNode pojoJGraphtTreeNode01 = createNode("A_id", 	"A", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode02 = createNode("B_id", 	"B", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode03 = createNode("A1_id", "A1", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode04 = createNode("A2_id", "A2", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode05 = createNode("B1_id", "B1", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode06 = createNode("B2_id", "B2", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode07 = createNode("x_id", 	"x", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode08 = createNode("y_id", 	"y", 				Integer.toString(++iVertexId)); //8th and 9th node:  create the same payload (entityID = "y"),
+		PojoJGraphtTreeNode pojoJGraphtTreeNode09 = createNode("y_id", 	"y", 				Integer.toString(++iVertexId)); //but for different TreeNode-iDs (to add "y_label" 1x to "A2" and  1x to "B1")
+		PojoJGraphtTreeNode pojoJGraphtTreeNode10 = createNode("ya_id", "ya", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode11 = createNode("yb_id", "yb", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode12 = createNode("za_id",	"za", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode13 = createNode("zb_id",	"zb", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode14 = createNode("zc_id",	"zc", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode15 = createNode("C_id",	"C", 				Integer.toString(++iVertexId));
+		PojoJGraphtTreeNode pojoJGraphtTreeNode16 = createNode("D_id",	"D", 				Integer.toString(++iVertexId));
+
+		
+        // ==========================================
+		// b) create tree as graph (Vertices & Edges)
+        // ==========================================
+		
+		SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = new SimpleDirectedGraph<>(DefaultEdge.class);
+
+		graph.addVertex(pojoJGraphtTreeNode01); 
+		graph.addVertex(pojoJGraphtTreeNode02); 
+		graph.addVertex(pojoJGraphtTreeNode03); 
+		graph.addVertex(pojoJGraphtTreeNode04); 
+		graph.addVertex(pojoJGraphtTreeNode05); 
+		graph.addVertex(pojoJGraphtTreeNode06); 
+		graph.addVertex(pojoJGraphtTreeNode07); 
+		graph.addVertex(pojoJGraphtTreeNode08); 
+		graph.addVertex(pojoJGraphtTreeNode09); 
+		graph.addVertex(pojoJGraphtTreeNode10); 
+		graph.addVertex(pojoJGraphtTreeNode11); 
+		graph.addVertex(pojoJGraphtTreeNode12); 
+		graph.addVertex(pojoJGraphtTreeNode13); 
+		graph.addVertex(pojoJGraphtTreeNode14); 
+		graph.addVertex(pojoJGraphtTreeNode15); 
+		graph.addVertex(pojoJGraphtTreeNode16); 
+		
+		graph.addEdge(pojoJGraphtTreeNode03, pojoJGraphtTreeNode01); 	// A1 ==> A 
+		graph.addEdge(pojoJGraphtTreeNode04, pojoJGraphtTreeNode01);  	// A2 ==> A
+
+		graph.addEdge(pojoJGraphtTreeNode05, pojoJGraphtTreeNode02); 	// B1 ==> B
+		graph.addEdge(pojoJGraphtTreeNode06, pojoJGraphtTreeNode02);    // B2 ==> B
+
+		graph.addEdge(pojoJGraphtTreeNode13, pojoJGraphtTreeNode03);    // zb ==> A1
+		graph.addEdge(pojoJGraphtTreeNode14, pojoJGraphtTreeNode03);    // zc ==> A1
+
+		graph.addEdge(pojoJGraphtTreeNode07, pojoJGraphtTreeNode04);    // x  ==> A2
+		graph.addEdge(pojoJGraphtTreeNode08, pojoJGraphtTreeNode04);    // y  ==> A2
+
+		graph.addEdge(pojoJGraphtTreeNode09, pojoJGraphtTreeNode05);    // y (double) ==> B1 
+		
+		graph.addEdge(pojoJGraphtTreeNode10, pojoJGraphtTreeNode06);    // y   ==> B2
+		graph.addEdge(pojoJGraphtTreeNode11, pojoJGraphtTreeNode06);    // yb  ==> B2
+		graph.addEdge(pojoJGraphtTreeNode12, pojoJGraphtTreeNode06);    // za  ==> B2
+		
+		
+        // ==========================================
+		// c) calculate parent and children
+        // ==========================================
+
+		JGraphTParentChildrenPopulator.calcParentIDAndChildrens(graph);
+
+		return graph;
+
+	}
+	
+
+	
+	/**
+	 * This method creates a Graph-Vertex ( = PojoJGraphtTreeNode ) which holds a payload with entity - information
+	 * @param objectId ID of the Object
+	 * @param objectLabel Label of the Object
+	 * @param vertexId ID of the Vertex, which is NOT equal to ID of the Entity
+	 * @return
+	 */
+	private static PojoJGraphtTreeNode createNode(String objectId, String objectLabel, String vertexId) {
+		
+		//What is an entity ... PojoEntityPayload is the payload, which answers this question 
+		PojoSimpleObjectPayload pojoObjectPayload = new PojoSimpleObjectPayload();
+		pojoObjectPayload.setObjectID(objectId);
+		pojoObjectPayload.setObjectLabel(objectLabel);
+		
+		PojoPayloadUiControl pojoPayloadUiControl = new PojoPayloadUiControl();
+				
+		PojoJGraphtTreeNode pojoTreeNode = new PojoJGraphtTreeNode();
+		pojoTreeNode.setId(vertexId);
+		pojoTreeNode.setLabel(objectLabel);
+		pojoTreeNode.setPayload(pojoObjectPayload);
+		pojoTreeNode.setUicontrol(pojoPayloadUiControl);
+		
+		return pojoTreeNode;
+	}
+	
+	
+}
