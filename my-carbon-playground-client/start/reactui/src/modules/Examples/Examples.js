@@ -6,6 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
 import * as CT_ADD_Examples from './../Common/codetable/carbonplay/CT_ADD_Examples';
 
 import ExampleButtons from './Buttons/ExampleButtons';
+
+import TopicIntroduction from './Tree_Topic/Introduction';
+
 import ExampleTreeSelfFilled from './TreeSelfFilled/ExampleTreeSelfFilled';
 import ExampleTreeBackendFilled from './TreeBackendFilled/ExampleTreeBackendFilled';
 import ExampleTreeBackendFilledViaList from './TreeBackendFilledViaList/ExampleTreeBackendFilledViaList';
@@ -29,6 +32,12 @@ class Pattern extends Component {
       case CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS:
         return (
           <ExampleButtons />
+        );
+        break;
+
+      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE:
+        return (
+          <TopicIntroduction />
         );
         break;
 
