@@ -21,8 +21,6 @@ public class SimpleDummyDataGenerator {
 		// a) create Nodes of Pojos
         // ===========================================
 
-		int iVertexId = 0; //VertexID counts "1", "2", "3", ...
-		
 		PojoJGraphtTreeNode pojoJGraphtTreeNode01 = createNode("A_id", 	"A");
 		PojoJGraphtTreeNode pojoJGraphtTreeNode02 = createNode("B_id", 	"B");
 		PojoJGraphtTreeNode pojoJGraphtTreeNode03 = createNode("A1_id", "A1");
@@ -96,6 +94,11 @@ public class SimpleDummyDataGenerator {
 	}
 	
 
+	
+	
+	
+	
+	
 	
 	/**
 	 * This method creates a Graph-Vertex ( = PojoJGraphtTreeNode ) which holds a payload with entity - information

@@ -8,6 +8,7 @@ import * as CT_ADD_Examples from './../Common/codetable/carbonplay/CT_ADD_Exampl
 import ExampleButtons from './Buttons/ExampleButtons';
 import ExampleTreeSelfFilled from './TreeSelfFilled/ExampleTreeSelfFilled';
 import ExampleTreeBackendFilled from './TreeBackendFilled/ExampleTreeBackendFilled';
+import ExampleTreeBackendFilledViaList from './TreeBackendFilledViaList/ExampleTreeBackendFilledViaList';
 
 class Pattern extends Component {
   constructor(props) {
@@ -27,21 +28,27 @@ class Pattern extends Component {
     switch (entityToDisplay) {
       case CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS:
         return (
-          <ExampleButtons/>
+          <ExampleButtons />
         );
         break;
 
       case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED:
         return (
-          <ExampleTreeSelfFilled/>
+          <ExampleTreeSelfFilled />
         );
         break;
 
-      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED:
+      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1:
         return (
-          <ExampleTreeBackendFilled/>
+          <ExampleTreeBackendFilled />
         );
         break;
+      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2:
+        return (
+          <ExampleTreeBackendFilledViaList />
+        );
+        break;
+
 
       default:
         return (

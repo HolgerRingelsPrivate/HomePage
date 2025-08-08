@@ -44,17 +44,17 @@ class EntityNavigation extends Component {
             value=""
             isExpanded={true}
             renderIcon={Folder}
-            >
+          >
 
-          <TreeNode
+            {/* <TreeNode
               id={CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS}
               label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS)}
               value=""
               isExpanded={true}
               renderIcon={Demo}
               onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS)}
-          >
-            </TreeNode>
+            >
+            </TreeNode> */}
 
             <TreeNode
               id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED}
@@ -67,15 +67,24 @@ class EntityNavigation extends Component {
             </TreeNode>
 
             <TreeNode
-              id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED}
-              label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED)}
+              id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1}
+              label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
               value=""
               isExpanded={true}
               renderIcon={Demo}
-              onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED)}
+              onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
             >
             </TreeNode>
 
+            <TreeNode
+              id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2}
+              label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
+              value=""
+              isExpanded={true}
+              renderIcon={Demo}
+              onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
+            >
+            </TreeNode>
 
           </TreeNode>
 

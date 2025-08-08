@@ -4,7 +4,8 @@ export const CODE = {
   UNDEFINED: "",
   JS_EXAMPLE_BUTTONS: "EXAMPLE_BUTTONS",
   JS_EXAMPLE_TREE_SELF_FILLED: "EXAMPLE_TREE_SELF_FILLED",
-  JS_EXAMPLE_TREE_BACKEND_FILLED: "EXAMPLE_TREE_BACKEND_FILLED",
+  JS_EXAMPLE_TREE_BACKEND_FILLED_1: "EXAMPLE_TREE_BACKEND_FILLED",
+  JS_EXAMPLE_TREE_BACKEND_FILLED_2: "EXAMPLE_TREE_BACKEND_FILLED_VIA_LIST",
 }
 
 
@@ -112,8 +113,12 @@ export function getUiItems_en () {
         text: 'Tree (via Java Script filled)'
       }, 
       {
-        code: CODE.JS_EXAMPLE_TREE_BACKEND_FILLED,
+        code: CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1,
         text: 'Tree (filled via Backend)'
+      }, 
+      {
+        code: CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2,
+        text: 'Tree (filled via Backend-List)'
       }, 
       {
         code: '',
@@ -140,8 +145,12 @@ export function getUiItems_de () {
         text: 'Baum (via JavaScript befüllt)'
       }, 
       {
-        code: CODE.JS_EXAMPLE_TREE_BACKEND_FILLED,
+        code: CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1,
         text: 'Baum (via BackEnd befüllt)'
+      }, 
+      {
+        code: CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2,
+        text: 'Baum (via BackEnd-Liste befüllt)'
       }, 
       {
         code: '',

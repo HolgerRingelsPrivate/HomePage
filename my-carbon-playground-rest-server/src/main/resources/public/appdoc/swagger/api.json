@@ -55,7 +55,35 @@
 
 			
 			
+		},
+		
+		"/api/carbonplay/Example/TreeViaList": {
+
+			"get": {
+		        "operationId": "exampleTreeApproachTwo",
+        		"summary": "Deliver an example Tree to populate a Carbon TreeView (Approach 2)",
+        		"tags" : ["Carbon Examples"],
+        		"produces": [
+       			   "application/json"
+        		],
+       			 "consumes": [
+          			"application/json"
+        		],
+        		
+        		 "responses": {
+			          "200": {
+           				 "description": "Example Tree has been delivered"
+          		 		  },
+          		 	  "500": {
+	           				 "description": "Internal Server Error"
+          		 		  }        
+               	}        		
+			}
+
+			
+			
 		}		
+		
 					
 
 		
