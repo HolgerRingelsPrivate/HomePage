@@ -3,6 +3,7 @@ import i18n from './../../../../singletons/i18n/I18n';
 export const CODE = {
   UNDEFINED: "",
   JS_EXAMPLE_BUTTONS: "EXAMPLE_BUTTONS",
+  JS_EXAMPLE_TREE: "EXAMPLE_TREE",
   JS_EXAMPLE_TREE_SELF_FILLED: "EXAMPLE_TREE_SELF_FILLED",
   JS_EXAMPLE_TREE_BACKEND_FILLED_1: "EXAMPLE_TREE_BACKEND_FILLED",
   JS_EXAMPLE_TREE_BACKEND_FILLED_2: "EXAMPLE_TREE_BACKEND_FILLED_VIA_LIST",
@@ -109,6 +110,10 @@ export function getUiItems_en () {
         text: 'Buttons'
       }, 
       {
+        code: CODE.JS_EXAMPLE_TREE,
+        text: 'Tree'
+      }, 
+      {
         code: CODE.JS_EXAMPLE_TREE_SELF_FILLED,
         text: 'Tree (via Java Script filled)'
       }, 
@@ -139,6 +144,10 @@ export function getUiItems_de () {
       {
         code: CODE.JS_EXAMPLE_BUTTONS,
         text: 'Schaltflächen (Buttons)'
+      }, 
+      {
+        code: CODE.JS_EXAMPLE_TREE,
+        text: 'Baum'
       }, 
       {
         code: CODE.JS_EXAMPLE_TREE_SELF_FILLED,
