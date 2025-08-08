@@ -111,7 +111,7 @@ export function getUiItems_en () {
       }, 
       {
         code: CODE.JS_EXAMPLE_TREE,
-        text: 'Tree'
+        text: 'Topic: Tree'
       }, 
       {
         code: CODE.JS_EXAMPLE_TREE_SELF_FILLED,
@@ -147,7 +147,7 @@ export function getUiItems_de () {
       }, 
       {
         code: CODE.JS_EXAMPLE_TREE,
-        text: 'Baum'
+        text: 'Thema: Baum'
       }, 
       {
         code: CODE.JS_EXAMPLE_TREE_SELF_FILLED,
