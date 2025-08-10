@@ -2,7 +2,7 @@ import * as Linking from "../../../Common/Linking";
 import { StatusCodes } from 'http-status-codes';
 
 const CONSTANTS = {
-    ENDPOINT: 'Example/Tree/Direct/Example'
+    ENDPOINT: 'Example/TreeViaRecursion'
 }
 
 import type { PojoJGraphtTreeNode, PojoJGraphtTreeNodeList } from '../../../Common/types/PojoJGraphtTreeNode';
