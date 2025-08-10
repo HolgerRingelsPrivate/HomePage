@@ -1,0 +1,86 @@
+{
+  "tableName": "TopicsAndExamples",	
+  "id": 101,
+  "codeTableItems": [
+
+    {
+      "code": "EXAMPLE_BUTTONS",
+      "language": "en",
+      "value": "Buttons",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_BUTTONS"
+    },
+    {
+      "code": "EXAMPLE_BUTTONS",
+      "language": "de",
+      "value": "Schaltfl\u00e4chen"
+    }
+    ,
+    {
+      "code": "EXAMPLE_TREE",
+      "language": "en",
+      "value": "Topic: Tree",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_TREE"
+    },
+    {
+      "code": "EXAMPLE_TREE",
+      "language": "de",
+      "value": "Thema: Baum"
+    }
+    ,
+    {
+      "code": "EXAMPLE_TREE_SELF_FILLED",
+      "language": "en",
+      "value": "Tree (via Java Script filled)",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_TREE_SELF_FILLED"
+    },
+    {
+      "code": "EXAMPLE_TREE_SELF_FILLED",
+      "language": "de",
+      "value": "Baum (via Java Script bef\u00fcllt)"
+    }
+    ,
+    {
+      "code": "EXAMPLE_TREE_BACKEND_FILLED_1",
+      "language": "en",
+      "value": "Tree (filled by Backend)",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_TREE_BACKEND_FILLED_1"
+    },
+    {
+      "code": "EXAMPLE_TREE_BACKEND_FILLED_1",
+      "language": "de",
+      "value": "Baum (bef\u00fcllt via BackEnd)"
+    }
+    ,
+    {
+      "code": "EXAMPLE_TREE_BACKEND_FILLED_2",
+      "language": "en",
+      "value": "Tree (filled by Backend-List)",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_TREE_BACKEND_FILLED_2"
+    },
+    {
+      "code": "EXAMPLE_TREE_BACKEND_FILLED_2",
+      "language": "de",
+      "value": "Baum (bef\u00fcllt via BackEnd-Liste)"
+    },
+    {
+      "code": "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY",
+      "language": "en",
+      "value": "Tree (filled from Explain-Directory)",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY"
+    },
+    {
+      "code": "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY",
+      "language": "de",
+      "value": "Baum (bef\u00fcllt vom Verzeichnis Erkl\u00e4rungen)"
+    }
+
+        
+
+  ]
+}

@@ -7,7 +7,7 @@ import { TreeView, TreeNode } from '@carbon/react';
 import { Folder, Demo, Document } from '@carbon/icons-react';
 import i18n from '@/singletons/i18n/I18n';
 
-import * as CT_ADD_Examples from './../../Common/codetable/carbonplay/CT_ADD_Examples';
+import * as CT_carbonplay_TopicsAndExamples from './../../Common/codetable/carbonplay/CT_carbonplay_TopicsAndExamples';
 
 class EntityNavigation extends Component {
   constructor(props) {
@@ -41,53 +41,54 @@ class EntityNavigation extends Component {
             renderIcon={Folder}
           >
 
-            {/* <TreeNode
-              id={CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS}
-              label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS)}
-              value=""
-              isExpanded={true}
-              renderIcon={Demo}
-              onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS)}
-            >
-            </TreeNode> */}
-
             <TreeNode
-              id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE}
-              label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE)}
+              id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE}
+              label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE)}
               value=""
               isExpanded={true}
               renderIcon={Document}
-              onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE)}
+              onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE)}
             >
 
 
               <TreeNode
-                id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED}
-                label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED)}
+                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_SELF_FILLED}
+                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_SELF_FILLED)}
                 value=""
                 isExpanded={true}
                 renderIcon={Demo}
-                onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED)}
+                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_SELF_FILLED)}
+              >
+              </TreeNode>
+
+
+              <TreeNode
+                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY}
+                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY)}
+                value=""
+                isExpanded={true}
+                renderIcon={Demo}
+                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY)}
               >
               </TreeNode>
 
               <TreeNode
-                id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1}
-                label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
+                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1}
+                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
                 value=""
                 isExpanded={true}
                 renderIcon={Demo}
-                onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
+                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
               >
               </TreeNode>
 
               <TreeNode
-                id={CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2}
-                label={CT_ADD_Examples.getTextForCode(CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
+                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2}
+                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
                 value=""
                 isExpanded={true}
                 renderIcon={Demo}
-                onSelect={this.toggleUi.bind(this, CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
+                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
               >
               </TreeNode>
 

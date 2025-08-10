@@ -30,11 +30,48 @@
 			
 		},
 		
-		"/api/carbonplay/Example/Tree": {
+		"/api/carbonplay/Explain/Package/Deliver/{identification}": {
 
 			"get": {
-		        "operationId": "exampleTreeApproachOne",
-        		"summary": "Deliver an example Tree to populate a Carbon TreeView (Approach 1)",
+		        "operationId": "explainDocumentDeliver",
+        		"summary": "Deliver a Document, which explains a topic ",
+        		"tags" : ["Explain Documents"],
+        		"produces": [
+       			   "application/json"
+        		],
+       			 "consumes": [
+          			"application/json"
+        		],
+        		
+        		"parameters": [
+        				{
+				            "name": "identification",
+				            "in": "path",
+				            "description": "Code picked up from Codetable CT_carbonplay_TopicsAndExamples",
+				            "required": true,
+				            "type": "string"
+				        }
+        		
+        		],
+        		 "responses": {
+			          "200": {
+           				 "description": "Document has been delivered"
+          		 		  },
+          		 	  "500": {
+	           				 "description": "Internal Server Error"
+          		 		  }        
+               	}        		
+			}
+
+			
+			
+		},
+		
+		"/api/carbonplay/Example/TreeViaRecursion": {
+
+			"get": {
+		        "operationId": "exampleTreeViaRecursion",
+        		"summary": "Deliver Explain Directory (recursively) as Tree to populate a Carbon TreeView (Approach 1)",
         		"tags" : ["Carbon Examples"],
         		"produces": [
        			   "application/json"
@@ -45,7 +82,7 @@
         		
         		 "responses": {
 			          "200": {
-           				 "description": "Example Tree has been delivered"
+           				 "description": "Example Tree has been delivered via Recursion"
           		 		  },
           		 	  "500": {
 	           				 "description": "Internal Server Error"
@@ -82,7 +119,35 @@
 
 			
 			
+		},
+		
+		"/api/carbonplay/Example/Tree/Direct/Example": {
+
+			"get": {
+		        "operationId": "exampleTreeApproachOne",
+        		"summary": "Deliver an example Tree to populate a Carbon TreeView (Approach 1) IDENTICAL-RESULT as TreeViaList",
+        		"tags" : ["Carbon Examples"],
+        		"produces": [
+       			   "application/json"
+        		],
+       			 "consumes": [
+          			"application/json"
+        		],
+        		
+        		 "responses": {
+			          "200": {
+           				 "description": "Example Tree has been delivered"
+          		 		  },
+          		 	  "500": {
+	           				 "description": "Internal Server Error"
+          		 		  }        
+               	}        		
+			}
+
+			
+			
 		}		
+		
 		
 					
 

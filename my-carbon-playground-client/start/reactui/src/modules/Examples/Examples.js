@@ -3,15 +3,16 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import * as CT_ADD_Examples from './../Common/codetable/carbonplay/CT_ADD_Examples';
+import * as CT_carbonplay_TopicsAndExamples from './../Common/codetable/carbonplay/CT_carbonplay_TopicsAndExamples';
 
 import ExampleButtons from './Buttons/ExampleButtons';
 
-import TopicIntroduction from './Tree_Topic/Introduction';
+import TreeTopicIntroduction from './Tree_Topic/Introduction';
 
 import ExampleTreeSelfFilled from './TreeSelfFilled/ExampleTreeSelfFilled';
 import ExampleTreeBackendFilled from './TreeBackendFilled/ExampleTreeBackendFilled';
 import ExampleTreeBackendFilledViaList from './TreeBackendFilledViaList/ExampleTreeBackendFilledViaList';
+import ExampleTreeBackendFilledExplainDirectory from './TreeBackendFilledExplainDirectory/ExampleTreeBackendFilledExplainDirectory';
 
 class Pattern extends Component {
   constructor(props) {
@@ -29,36 +30,40 @@ class Pattern extends Component {
     let { entityToDisplay } = this.props;
 
     switch (entityToDisplay) {
-      case CT_ADD_Examples.CODE.JS_EXAMPLE_BUTTONS:
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_BUTTONS:
         return (
           <ExampleButtons />
         );
         break;
 
-      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE:
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE:
         return (
-          <TopicIntroduction />
+          <TreeTopicIntroduction />
         );
         break;
 
-      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_SELF_FILLED:
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_SELF_FILLED:
         return (
           <ExampleTreeSelfFilled />
         );
         break;
 
-      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1:
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1:
         return (
           <ExampleTreeBackendFilled />
         );
         break;
-      case CT_ADD_Examples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2:
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2:
         return (
           <ExampleTreeBackendFilledViaList />
         );
         break;
-
-
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY:
+        return (
+          <ExampleTreeBackendFilledExplainDirectory />
+        );
+        break;
+  
       default:
         return (
           <div>?</div>
