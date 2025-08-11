@@ -35,8 +35,9 @@ public class SimpleDummyDataGeneratorViaList {
 		hashMap.put( "6", createNode("B2_id", 	"B2",  "6",  "2"));
 		hashMap.put( "7", createNode("x_id", 	"x",   "7",  "4"));
 		
-		hashMap.put( "8", createNode("y_id", 	"y",   "8",  "4")); //these 2 nodes:  create the same payload (entityID = "y"),
-		hashMap.put( "9", createNode("y_id", 	"y",   "9",  "5")); //but for different TreeNode-iDs (to add "y_label" 1x to "A2" and  1x to "B1")
+		hashMap.put( "8", createNode("y_id", 	"y",   "8",  "4")); // these 2 nodes:  create the same payload (entityID = "y"),
+		hashMap.put( "9", createNode("y_id", 	"y",   "9",  "5")); // but for different TreeNode-iDs 
+																	// (to add "y_label" 1x to "A2" and  1x to "B1")
 
 		hashMap.put("10", createNode("ya_id", 	"ya", "10",  "6"));
 		hashMap.put("11", createNode("yb_id", 	"yb", "11",  "6"));
