@@ -1,4 +1,4 @@
-export function getLeafDisplay(node) {
+export function getNodeContent(node) {
 
     return(
         <>

@@ -42,7 +42,7 @@ class Tree extends Component {
     nodes.map((node) => (
       <TreeNode
         key={node.id}
-        label={NodeContentProvider.getLeafDisplay(node)}
+        label={NodeContentProvider.getNodeContent(node)}
         isExpanded={false}
         renderIcon={NodeIconProvider.getIcon(node)}
       >
