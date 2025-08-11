@@ -7,12 +7,11 @@ import * as CT_carbonplay_TopicsAndExamples from './../Common/codetable/carbonpl
 
 import ExampleButtons from './Buttons/ExampleButtons';
 
-import TreeTopicIntroduction from './Tree_Topic/Introduction';
-
-import ExampleTreeSelfFilled from './TreeSelfFilled/ExampleTreeSelfFilled';
-import ExampleTreeBackendFilled from './TreeBackendFilled/ExampleTreeBackendFilled';
-import ExampleTreeBackendFilledViaList from './TreeBackendFilledViaList/ExampleTreeBackendFilledViaList';
-import ExampleTreeBackendFilledExplainDirectory from './TreeBackendFilledExplainDirectory/ExampleTreeBackendFilledExplainDirectory';
+import Tree_Introduction from './Tree_00_Topic/Introduction';
+import Tree_01 from './Tree_01_SelfFilled/Tree';
+import Tree_02 from './Tree_02_BackendFilledExplainDirectory/Tree';
+import Tree_03 from './Tree_03_BackendFilledViaList/Tree';
+import Tree_04 from './Tree_04_BackendFilled/Tree';
 
 class Pattern extends Component {
   constructor(props) {
@@ -38,29 +37,29 @@ class Pattern extends Component {
 
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE:
         return (
-          <TreeTopicIntroduction />
+          <Tree_Introduction />
         );
         break;
 
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_SELF_FILLED:
         return (
-          <ExampleTreeSelfFilled />
+          <Tree_01 />
         );
         break;
 
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1:
         return (
-          <ExampleTreeBackendFilled />
+          <Tree_04 />
         );
         break;
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2:
         return (
-          <ExampleTreeBackendFilledViaList />
+          <Tree_03 />
         );
         break;
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY:
         return (
-          <ExampleTreeBackendFilledExplainDirectory />
+          <Tree_02 />
         );
         break;
   

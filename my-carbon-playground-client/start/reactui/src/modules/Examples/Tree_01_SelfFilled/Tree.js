@@ -7,7 +7,7 @@ import { TreeView, TreeNode, InlineLoading } from '@carbon/react';
 
 import * as TreeSelfFillDummyClient from './backend/TreeSelfFillDummyClient';
 
-class ExampleTreeSelfFilled extends Component {
+class Tree extends Component {
   constructor(props) {
     super(props);
     // Initialize state
@@ -73,4 +73,4 @@ class ExampleTreeSelfFilled extends Component {
   }
 }
 
-export default ExampleTreeSelfFilled;
+export default Tree;
