@@ -25,9 +25,8 @@ class ExampleTreeBackendFilled extends Component {
    */
   async componentDidMount() {
     let dataFromRestService = await TreeBackendFilledRestClient.captureTree(null);
-    let body = dataFromRestService.body;
     this.setState({
-      treeData: body // PojoTreeNodeList
+      treeData: dataFromRestService
     });
   }
 

@@ -73,6 +73,16 @@ class EntityNavigation extends Component {
               </TreeNode>
 
               <TreeNode
+                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2}
+                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
+                value=""
+                isExpanded={true}
+                renderIcon={Demo}
+                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
+              >
+              </TreeNode>
+
+              <TreeNode
                 id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1}
                 label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
                 value=""
@@ -82,15 +92,6 @@ class EntityNavigation extends Component {
               >
               </TreeNode>
 
-              <TreeNode
-                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2}
-                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
-                value=""
-                isExpanded={true}
-                renderIcon={Demo}
-                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
-              >
-              </TreeNode>
 
             </TreeNode>
 

@@ -25,9 +25,9 @@ class ExampleTreeBackendFilledExplainDirectory extends Component {
    */
   async componentDidMount() {
     let dataFromRestService = await TreeBackendFilledExplainDirectoryClient.captureTree(null);
-    let body = dataFromRestService.body;
+    dataFromRestService;
     this.setState({
-      treeData: body // PojoTreeNodeList
+      treeData: dataFromRestService 
     });
   }
 

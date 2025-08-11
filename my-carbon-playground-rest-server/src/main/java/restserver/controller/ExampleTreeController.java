@@ -68,10 +68,7 @@ public class ExampleTreeController {
 			//<==========
 
 			result =  new ResponseEntity<>(array,HttpStatus.OK);
-
-			ResponseEntity<Object> responseEntity 
-			= new ResponseEntity<Object>(result, HttpStatus.OK);
-			return responseEntity;		
+			return result;		
 
 		} catch (Exception e) {
 			logger.error("", e);
@@ -121,10 +118,7 @@ public class ExampleTreeController {
 			//<==========
 
 			result =  new ResponseEntity<>(array,HttpStatus.OK);
-
-			ResponseEntity<Object> responseEntity 
-			= new ResponseEntity<Object>(result, HttpStatus.OK);
-			return responseEntity;		
+			return result;
 
 		} catch (Exception e) {
 			logger.error("", e);
@@ -179,10 +173,7 @@ public class ExampleTreeController {
 			//<==========
 
 			result =  new ResponseEntity<>(array,HttpStatus.OK);
-
-			ResponseEntity<Object> responseEntity 
-			= new ResponseEntity<Object>(result, HttpStatus.OK);
-			return responseEntity;		
+			return result;
 
 		} catch (Exception e) {
 			logger.error("", e);
