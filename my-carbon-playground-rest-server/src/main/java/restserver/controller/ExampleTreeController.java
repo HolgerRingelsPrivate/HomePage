@@ -29,107 +29,6 @@ import restserver.objects.tree.generator.SimpleDummyDataGeneratorViaList;
 @RestController
 public class ExampleTreeController {
 
-	
-	// *************************
-	// * Approach 1 
-	// ************************************************************************************************************************
-	public static final String EXAMPLE_TREE_APPROACH_1 = "/Example/Tree/Direct/Example";
-	// ************************************************************************************************************************
-	/**
-	 * This method retrieves a tree of all entities related to a Profile<br/>
-	 * @param profileID Profile's ID  
-	 * @return Tree's Root-Elements
-	 */
-	@CrossOrigin
-	@RequestMapping(method = RequestMethod.GET, value = EXAMPLE_TREE_APPROACH_1)
-	public ResponseEntity<Object> doGetModelEntitiesDirect() {
-
-		String endPointInfo = EXAMPLE_TREE_APPROACH_1 + " GET"; 
-
-		Logger logger = LoggerFactory.getLogger(ExampleTreeController.class);
-		logger.info("");
-		logger.info(endPointInfo);
-		logger.info("");
-
-		ResponseEntity<Object> result = null;
-
-		try {
-			//========== >
-
-			//get data as Graph without any edges
-			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGenerator.gatherEntitiesTree();
-
-			//identify root-nodes
-			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
-			
-			//sort array by label
-			Arrays.sort(array, Comparator.comparing(node -> node.getLabel()));
-			
-			//<==========
-
-			result =  new ResponseEntity<>(array,HttpStatus.OK);
-			return result;		
-
-		} catch (Exception e) {
-			logger.error("", e);
-			PojoErrorResult pojoErrorResult = new PojoErrorResult("", Constants_CT_ErrorCodes.NO_ERROR_CODE, e);
-			ResponseEntity<Object> responseEntity 
-			= new ResponseEntity<Object>(pojoErrorResult, HttpStatus.INTERNAL_SERVER_ERROR);
-			return responseEntity;		
-		}
-	
-	}
-
-	// *************************
-	// * Approach 2 
-	// ************************************************************************************************************************
-	public static final String EXAMPLE_TREE_APPROACH_2 = "/Example/TreeViaList";
-	// ************************************************************************************************************************
-	/**
-	 * This method retrieves a tree of all entities related to a Profile<br/>
-	 * @param profileID Profile's ID  
-	 * @return Tree's Root-Elements
-	 */
-	@CrossOrigin
-	@RequestMapping(method = RequestMethod.GET, value = EXAMPLE_TREE_APPROACH_2)
-	public ResponseEntity<Object> doGetModelEntitiesViaList() {
-
-		String endPointInfo = EXAMPLE_TREE_APPROACH_2 + " GET"; 
-
-		Logger logger = LoggerFactory.getLogger(ExampleTreeController.class);
-		logger.info("");
-		logger.info(endPointInfo);
-		logger.info("");
-
-		ResponseEntity<Object> result = null;
-
-		try {
-			//========== >
-
-			//get data as Graph without any edges
-			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGeneratorViaList.gatherEntitiesTree();
-
-			//identify root-nodes
-			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
-			
-			//sort array by label
-			Arrays.sort(array, Comparator.comparing(node -> node.getLabel()));
-			
-			//<==========
-
-			result =  new ResponseEntity<>(array,HttpStatus.OK);
-			return result;
-
-		} catch (Exception e) {
-			logger.error("", e);
-			PojoErrorResult pojoErrorResult = new PojoErrorResult("", Constants_CT_ErrorCodes.NO_ERROR_CODE, e);
-			ResponseEntity<Object> responseEntity 
-			= new ResponseEntity<Object>(pojoErrorResult, HttpStatus.INTERNAL_SERVER_ERROR);
-			return responseEntity;		
-		}
-	
-	}
-	
 	// *************************
 	// * Approach 1 
 	// ************************************************************************************************************************
@@ -187,7 +86,108 @@ public class ExampleTreeController {
 	
 	
 	
+
+	// *************************
+	// * Approach 2 
+	// ************************************************************************************************************************
+	public static final String EXAMPLE_TREE_APPROACH_2 = "/Example/TreeViaList";
+	// ************************************************************************************************************************
+	/**
+	 * This method retrieves a tree of all entities related to a Profile<br/>
+	 * @param profileID Profile's ID  
+	 * @return Tree's Root-Elements
+	 */
+	@CrossOrigin
+	@RequestMapping(method = RequestMethod.GET, value = EXAMPLE_TREE_APPROACH_2)
+	public ResponseEntity<Object> doGetModelEntitiesViaList() {
+
+		String endPointInfo = EXAMPLE_TREE_APPROACH_2 + " GET"; 
+
+		Logger logger = LoggerFactory.getLogger(ExampleTreeController.class);
+		logger.info("");
+		logger.info(endPointInfo);
+		logger.info("");
+
+		ResponseEntity<Object> result = null;
+
+		try {
+			//========== >
+
+			//get data as Graph without any edges
+			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGeneratorViaList.gatherEntitiesTree();
+
+			//identify root-nodes
+			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
+			
+			//sort array by label
+			Arrays.sort(array, Comparator.comparing(node -> node.getLabel()));
+			
+			//<==========
+
+			result =  new ResponseEntity<>(array,HttpStatus.OK);
+			return result;
+
+		} catch (Exception e) {
+			logger.error("", e);
+			PojoErrorResult pojoErrorResult = new PojoErrorResult("", Constants_CT_ErrorCodes.NO_ERROR_CODE, e);
+			ResponseEntity<Object> responseEntity 
+			= new ResponseEntity<Object>(pojoErrorResult, HttpStatus.INTERNAL_SERVER_ERROR);
+			return responseEntity;		
+		}
 	
+	}
+	
+	
+	
+	// *************************
+	// * Tree Direct Example
+	// ************************************************************************************************************************
+	public static final String EXAMPLE_TREE_APPROACH_1 = "/Example/Tree/Direct/Example";
+	// ************************************************************************************************************************
+	/**
+	 * This method retrieves a tree of all entities related to a Profile<br/>
+	 * @param profileID Profile's ID  
+	 * @return Tree's Root-Elements
+	 */
+	@CrossOrigin
+	@RequestMapping(method = RequestMethod.GET, value = EXAMPLE_TREE_APPROACH_1)
+	public ResponseEntity<Object> doGetModelEntitiesDirect() {
+
+		String endPointInfo = EXAMPLE_TREE_APPROACH_1 + " GET"; 
+
+		Logger logger = LoggerFactory.getLogger(ExampleTreeController.class);
+		logger.info("");
+		logger.info(endPointInfo);
+		logger.info("");
+
+		ResponseEntity<Object> result = null;
+
+		try {
+			//========== >
+
+			//get data as Graph without any edges
+			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGenerator.gatherEntitiesTree();
+
+			//identify root-nodes
+			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
+			
+			//sort array by label
+			Arrays.sort(array, Comparator.comparing(node -> node.getLabel()));
+			
+			//<==========
+
+			result =  new ResponseEntity<>(array,HttpStatus.OK);
+			return result;		
+
+		} catch (Exception e) {
+			logger.error("", e);
+			PojoErrorResult pojoErrorResult = new PojoErrorResult("", Constants_CT_ErrorCodes.NO_ERROR_CODE, e);
+			ResponseEntity<Object> responseEntity 
+			= new ResponseEntity<Object>(pojoErrorResult, HttpStatus.INTERNAL_SERVER_ERROR);
+			return responseEntity;		
+		}
+	
+	}
 	
 	
 	
