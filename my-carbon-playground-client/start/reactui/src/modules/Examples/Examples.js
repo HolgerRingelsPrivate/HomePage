@@ -7,7 +7,7 @@ import * as CT_carbonplay_TopicsAndExamples from './../Common/codetable/carbonpl
 
 import ExampleButtons from './Buttons/ExampleButtons';
 
-import Tree_Introduction from './Tree_00_Topic/Introduction';
+import Tree_00 from './Tree_00_Topic/Introduction';
 import Tree_01 from './Tree_01_SelfFilled/Tree';
 import Tree_02 from './Tree_02_BackendFilledExplainDirectory/Tree';
 import Tree_03 from './Tree_03_BackendFilledViaList/Tree';
@@ -37,7 +37,7 @@ class Pattern extends Component {
 
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE:
         return (
-          <Tree_Introduction />
+          <Tree_00 />
         );
         break;
 

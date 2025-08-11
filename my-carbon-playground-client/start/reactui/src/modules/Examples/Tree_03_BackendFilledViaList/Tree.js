@@ -5,9 +5,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { TreeView, TreeNode, InlineLoading } from '@carbon/react';
 
-import * as TreeBackendFilledViaListRestClient from './backend/TreeBackendFilledViaListRestClient';
-import * as NodeContentProvider from './uihelper/ExampleTreeBackendFilledViaList_NodeContentProvider';
-import * as NodeIconProvider from './uihelper/ExampleTreeBackendFilledViaList_NodeIconProvider';
+import * as RESTClient from './backend/RestClient';
+import * as NodeContentProvider from './uihelper/NodeContentProvider';
+import * as NodeIconProvider from './uihelper/NodeIconProvider';
 
 class Tree extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Tree extends Component {
    * REST-Server and stores it to this component's state
    */
   async componentDidMount() {
-    let dataFromRestService = await TreeBackendFilledViaListRestClient.captureTree(null);
+    let dataFromRestService = await RESTClient.captureTree(null);
     this.setState({
       treeData: dataFromRestService
     });

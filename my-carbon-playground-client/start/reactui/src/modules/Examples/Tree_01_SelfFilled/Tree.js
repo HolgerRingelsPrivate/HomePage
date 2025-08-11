@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { TreeView, TreeNode, InlineLoading } from '@carbon/react';
 
-import * as TreeSelfFillDummyClient from './backend/TreeSelfFillDummyClient';
+import * as DummyClient from './backend/DummyClient';
 
 class Tree extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Tree extends Component {
    * Dummy Data Provider and stores it to this component's state
    */
   async componentDidMount() {
-    let dataFromRestService = await TreeSelfFillDummyClient.captureTree();
+    let dataFromRestService = await DummyClient.captureTree();
     this.setState({
       treeData: dataFromRestService // PojoTreeNodeList
     });
