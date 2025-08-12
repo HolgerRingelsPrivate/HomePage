@@ -20,7 +20,7 @@ public class DataGeneratorForDirectory {
 	 * @return
 	 * @throws Exception
 	 */
-	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherEntitiesTree(Path p) throws Exception {
+	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherTree(Path p) throws Exception {
 
 
         // =========================================================

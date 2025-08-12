@@ -41,6 +41,7 @@ class Introduction extends Component {
                     />
                   </TableCell>
                 </TableRow>
+
                 <TableRow>
                   <TableCell>
                     {CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY)}
@@ -51,16 +52,7 @@ class Introduction extends Component {
                     />
                   </TableCell>
                 </TableRow>
-                <TableRow>
-                  <TableCell>
-                    {CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
-                  </TableCell>
-                  <TableCell>
-                  <ExplainPackageDownloadLink
-                      packageId = {CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1}
-                    />
-                  </TableCell>
-                </TableRow>
+
                 <TableRow>
                   <TableCell>
                     {CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2)}
@@ -71,6 +63,18 @@ class Introduction extends Component {
                     />
                   </TableCell>
                 </TableRow>
+
+                <TableRow>
+                  <TableCell>
+                    {CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1)}
+                  </TableCell>
+                  <TableCell>
+                  <ExplainPackageDownloadLink
+                      packageId = {CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_1}
+                    />
+                  </TableCell>
+                </TableRow>
+
               </TableBody>
             </Table>
           </TableContainer>

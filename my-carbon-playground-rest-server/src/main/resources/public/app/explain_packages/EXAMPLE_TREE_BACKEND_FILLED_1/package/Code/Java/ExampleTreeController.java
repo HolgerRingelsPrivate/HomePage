@@ -53,6 +53,7 @@ public class ExampleTreeController {
 		ResponseEntity<Object> result = null;
 
 		try {
+			
 			//========== >
 
 			//don't worry to much about this ... it is just a way to gain access to explain_packages
@@ -63,7 +64,7 @@ public class ExampleTreeController {
 
 			
 			//get data as Graph without any edges
-			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = DataGeneratorForDirectory.gatherEntitiesTree(pRoot);
+			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = DataGeneratorForDirectory.gatherTree(pRoot);
 
 			//identify root-nodes
 			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
@@ -115,7 +116,7 @@ public class ExampleTreeController {
 			//========== >
 
 			//get data as Graph without any edges
-			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGeneratorViaList.gatherEntitiesTree();
+			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGeneratorViaList.gatherTree();
 
 			//identify root-nodes
 			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);
@@ -167,7 +168,7 @@ public class ExampleTreeController {
 			//========== >
 
 			//get data as Graph without any edges
-			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGenerator.gatherEntitiesTree();
+			SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph = SimpleDummyDataGenerator.gatherTree();
 
 			//identify root-nodes
 			PojoJGraphtTreeNode[] array = JGraphTListToTreeTransformer.getTreeRootNodes(graph);

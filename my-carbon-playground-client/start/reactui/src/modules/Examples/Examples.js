@@ -52,17 +52,19 @@ class Pattern extends Component {
           <Tree_04 />
         );
         break;
+
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_BACKEND_FILLED_2:
         return (
           <Tree_03 />
         );
         break;
+
       case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY:
         return (
           <Tree_02 />
         );
         break;
-  
+
       default:
         return (
           <div>?</div>

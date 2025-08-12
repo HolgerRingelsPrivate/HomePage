@@ -18,7 +18,7 @@ public class SimpleDummyDataGeneratorViaList {
 	 * @return
 	 * @throws Exception
 	 */
-	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherEntitiesTree() throws Exception {
+	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherTree() throws Exception {
 
 	    // =====================================================
 		// a) create Pojos with hierarchical information inside
