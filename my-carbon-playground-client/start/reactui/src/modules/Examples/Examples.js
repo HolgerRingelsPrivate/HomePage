@@ -12,6 +12,7 @@ import Tree_01 from './Tree_01_SelfFilled/Tree';
 import Tree_02 from './Tree_02_BackendFilledExplainDirectory/Tree';
 import Tree_03 from './Tree_03_BackendFilledViaList/Tree';
 import Tree_04 from './Tree_04_BackendFilled/Tree';
+import Tree_05 from './Tree_05_FeaturedUi/Tree';
 
 class Pattern extends Component {
   constructor(props) {
@@ -64,6 +65,13 @@ class Pattern extends Component {
           <Tree_02 />
         );
         break;
+
+      case CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FEATURED_UI:
+        return (
+          <Tree_05 />
+        );
+        break;
+
 
       default:
         return (

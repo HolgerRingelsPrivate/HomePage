@@ -1,12 +1,13 @@
 package common.utils.jgrapht.pojo;
 
-public class PojoPayloadAbstract {
+public abstract class PojoPayloadAbstract {
 
-	// In Java, the term clazz is often used as a convention for referring to a variable that holds a reference to a Class<?> object 
-	// (an instance of java.lang.Class). It is not a keyword or special feature—just a common naming pattern used by developers.
-	
 	String clazz; //Identification of the PayLoad Class
-
+	String id;
+	String name; //visual label for the object
+	String vertexType;   //e.g. used to distinguish between Taxonomy and Leaves
+						 //typically filled by a CodeTable
+	
 	public PojoPayloadAbstract() {
 		this.setClazz(this.getClass().getName());
 	}
@@ -18,4 +19,31 @@ public class PojoPayloadAbstract {
 	public void setClazz(String clazz) {
 		this.clazz = clazz;
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getVertexType() {
+		return vertexType;
+	}
+
+	public void setVertexType(String vertexType) {
+		this.vertexType = vertexType;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
 }

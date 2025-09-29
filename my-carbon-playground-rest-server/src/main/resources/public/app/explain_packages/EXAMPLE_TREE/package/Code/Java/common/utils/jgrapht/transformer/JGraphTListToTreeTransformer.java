@@ -1,4 +1,4 @@
-package common.utils.jgrapht.helper;
+package common.utils.jgrapht.transformer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,6 +11,9 @@ import common.utils.jgrapht.exceptions.InconsistentHierarchyException;
 import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
 
 public class JGraphTListToTreeTransformer {
+
+	
+
 
 	/**
 	 * This method handles a SimpleDirectedGraph, which is expected to NOT have any Edges defined yet<br/>
@@ -152,5 +155,5 @@ public class JGraphTListToTreeTransformer {
 		PojoJGraphtTreeNode[] result = arrayNew.toArray(new PojoJGraphtTreeNode[0]);
 		return result;
 	}
-	
+
 }

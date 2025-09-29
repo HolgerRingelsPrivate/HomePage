@@ -75,6 +75,17 @@ class Introduction extends Component {
                   </TableCell>
                 </TableRow>
 
+                <TableRow>
+                  <TableCell>
+                    {CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FEATURED_UI)}
+                  </TableCell>
+                  <TableCell>
+                  <ExplainPackageDownloadLink
+                      packageId = {CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FEATURED_UI}
+                    />
+                  </TableCell>
+                </TableRow>
+
               </TableBody>
             </Table>
           </TableContainer>

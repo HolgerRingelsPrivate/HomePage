@@ -7,9 +7,9 @@ import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
 
 import common.utils.StringUtils;
-import common.utils.jgrapht.helper.JGraphTParentChildrenPopulator;
 import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
 import common.utils.jgrapht.pojo.PojoPayloadUiControl;
+import common.utils.jgrapht.transformer.JGraphTParentChildrenPopulator;
 import restserver.objects.tree.object.payload.PojoFilePayload;
 
 public class DataGeneratorForDirectory {
@@ -20,7 +20,7 @@ public class DataGeneratorForDirectory {
 	 * @return
 	 * @throws Exception
 	 */
-	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherEntitiesTree(Path p) throws Exception {
+	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherTree(Path p) throws Exception {
 
 
         // =========================================================

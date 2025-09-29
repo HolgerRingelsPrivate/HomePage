@@ -6,9 +6,9 @@ import java.util.Map;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
 
-import common.utils.jgrapht.helper.JGraphTParentChildrenPopulator;
 import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
 import common.utils.jgrapht.pojo.PojoPayloadUiControl;
+import common.utils.jgrapht.transformer.JGraphTParentChildrenPopulator;
 import restserver.objects.tree.object.payload.PojoSimpleObjectPayload;
 
 public class SimpleDummyDataGeneratorViaList {
@@ -18,7 +18,7 @@ public class SimpleDummyDataGeneratorViaList {
 	 * @return
 	 * @throws Exception
 	 */
-	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherEntitiesTree() throws Exception {
+	public static SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> gatherTree() throws Exception {
 
 	    // =====================================================
 		// a) create Pojos with hierarchical information inside

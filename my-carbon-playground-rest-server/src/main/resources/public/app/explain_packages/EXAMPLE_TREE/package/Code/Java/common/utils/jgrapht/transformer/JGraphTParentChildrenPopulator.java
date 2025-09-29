@@ -1,5 +1,6 @@
-package common.utils.jgrapht.helper;
+package common.utils.jgrapht.transformer;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 import org.jgrapht.graph.DefaultEdge;
@@ -13,8 +14,11 @@ public class JGraphTParentChildrenPopulator {
 	 * This method calculates partent_IDs and children[] as used by TreeViewer
 	 * based on SimpleDirectedGraphs vertices and edges
 	 * @param graph SimpleDirectedGraph based on Vertex = PojoJGraphtTreeNode, Edge = DefaultEdge
+	 * @return an array of Vertices, which does not have a parent (these are the root-Nodes (there can be more than one)
 	 */
-	public static void calcParentIDAndChildrens(SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph) {
+	public static PojoJGraphtTreeNode[] calcParentIDAndChildrens(SimpleDirectedGraph<PojoJGraphtTreeNode, DefaultEdge> graph) {
+
+		ArrayList<PojoJGraphtTreeNode> roots = new ArrayList<PojoJGraphtTreeNode>();
 
 		//loop over all known nodes (Vertices)
 		for (PojoJGraphtTreeNode vertex : graph.vertexSet()) {
@@ -38,6 +42,10 @@ public class JGraphTParentChildrenPopulator {
 				
 				//set current Vertex's parent id = id of parent
 				vertex.setParentId(parent.getId());
+			} else {
+				
+				//there is no outgoing edge ... ok... this Node is a root-Node
+				roots.add(vertex);
 			}
 			
 			// +----------------------------------------
@@ -66,6 +74,11 @@ public class JGraphTParentChildrenPopulator {
 			System.out.println();
 
 		}
+		
+		PojoJGraphtTreeNode[] aryRoots = roots.toArray(new PojoJGraphtTreeNode[0]);
+		return aryRoots;
+
+		
 	}
 
 }

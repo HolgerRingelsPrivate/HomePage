@@ -41,6 +41,11 @@ public final class CT_carbonplay_TopicsAndExamples {
 	 */
 	public static final String EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY = "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY";
 
+	/**
+	 * Code 'EXAMPLE_TREE_FEATURED_UI' = Value 'Tree (with handling options)'
+	 */
+	public static final String EXAMPLE_TREE_FEATURED_UI = "EXAMPLE_TREE_FEATURED_UI";
+
 //
 // Access to English Text (via Java) ... e.g. for REST-Service Implementation
 //
@@ -72,6 +77,7 @@ public final class CT_carbonplay_TopicsAndExamples {
 		if (code.equals("EXAMPLE_TREE_BACKEND_FILLED_1")) { return "Tree (filled by Backend)";}
 		if (code.equals("EXAMPLE_TREE_BACKEND_FILLED_2")) { return "Tree (filled by Backend-List)";}
 		if (code.equals("EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY")) { return "Tree (filled from Explain-Directory)";}
+		if (code.equals("EXAMPLE_TREE_FEATURED_UI")) { return "Tree (with handling options)";}
 		return "";
 	}
 
@@ -91,6 +97,7 @@ public final class CT_carbonplay_TopicsAndExamples {
 		if (code.equals("EXAMPLE_TREE_BACKEND_FILLED_1")) { return "";}
 		if (code.equals("EXAMPLE_TREE_BACKEND_FILLED_2")) { return "";}
 		if (code.equals("EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY")) { return "";}
+		if (code.equals("EXAMPLE_TREE_FEATURED_UI")) { return "";}
 		return "";
 	}
 
@@ -110,6 +117,7 @@ public final class CT_carbonplay_TopicsAndExamples {
 		if (code.equals("EXAMPLE_TREE_BACKEND_FILLED_1")) { return true; }
 		if (code.equals("EXAMPLE_TREE_BACKEND_FILLED_2")) { return true; }
 		if (code.equals("EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY")) { return true; }
+		if (code.equals("EXAMPLE_TREE_FEATURED_UI")) { return true; }
 		return false;
 	}
 
@@ -131,6 +139,7 @@ public final class CT_carbonplay_TopicsAndExamples {
 		sResult = sResult + "EXAMPLE_TREE_BACKEND_FILLED_1" + delimiter;
 		sResult = sResult + "EXAMPLE_TREE_BACKEND_FILLED_2" + delimiter;
 		sResult = sResult + "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY" + delimiter;
+		sResult = sResult + "EXAMPLE_TREE_FEATURED_UI" + delimiter;
 		sResult = sResult.substring(0, sResult.length() - delimiter.length());
 		return sResult;
 		

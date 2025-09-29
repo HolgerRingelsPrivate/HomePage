@@ -1,8 +1,7 @@
 package common.utils.jgrapht.pojo;
 
 /**
- * This class represents a simples (minimal) implementation of a JGraphT Vertex
- * Any created Vertex-implementations with more information are expected to extend this class.
+ * This is the simples (minimal) implementation of a JGraphT Vertex
  */
 public class PojoJGraphtVertex {
 
@@ -18,6 +17,10 @@ public class PojoJGraphtVertex {
 		this.id = id;
 	}
 
+	
+	
+	//optional, but important for Comparing and HashSet/Use in Graphs
+	  
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,5 +38,5 @@ public class PojoJGraphtVertex {
     public String toString() {
         return id;
     }
-
+    
 }

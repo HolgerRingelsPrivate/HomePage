@@ -3,9 +3,9 @@ package restserver.objects.tree.generator;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
 
-import common.utils.jgrapht.helper.JGraphTParentChildrenPopulator;
 import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
 import common.utils.jgrapht.pojo.PojoPayloadUiControl;
+import common.utils.jgrapht.transformer.JGraphTParentChildrenPopulator;
 import restserver.objects.tree.object.payload.PojoSimpleObjectPayload;
 
 public class SimpleDummyDataGenerator {

@@ -3,10 +3,11 @@ package restserver.objects.tree.generator;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
 
-import common.utils.jgrapht.helper.JGraphTParentChildrenPopulator;
 import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
 import common.utils.jgrapht.pojo.PojoPayloadUiControl;
+import common.utils.jgrapht.transformer.JGraphTParentChildrenPopulator;
 import restserver.objects.tree.object.payload.PojoSimpleObjectPayload;
+import server.app.model.codetable.CT_carbonplay_VertexTypes;
 
 public class SimpleDummyDataGenerator {
 
@@ -21,24 +22,26 @@ public class SimpleDummyDataGenerator {
 		// a) create Nodes of Pojos
         // ===========================================
 
-		PojoJGraphtTreeNode pojoJGraphtTreeNode01 = createNode("A_id", 	"A");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode02 = createNode("B_id", 	"B");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode03 = createNode("A1_id", "A1");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode04 = createNode("A2_id", "A2");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode05 = createNode("B1_id", "B1");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode06 = createNode("B2_id", "B2");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode07 = createNode("x_id", 	"x");
-		
-		PojoJGraphtTreeNode pojoJGraphtTreeNode08 = createNode("y_id", 	"y"); //these 2 nodes:  create the same payload (entityID = "y"),
-		PojoJGraphtTreeNode pojoJGraphtTreeNode09 = createNode("y_id", 	"y"); //but for different TreeNode-iDs (to add "y_label" 1x to "A2" and  1x to "B1")
+		PojoJGraphtTreeNode pojoJGraphtTreeNode01 = createNode("A_id", 	"A", CT_carbonplay_VertexTypes.TAXONOMY);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode02 = createNode("B_id", 	"B", CT_carbonplay_VertexTypes.TAXONOMY);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode03 = createNode("A1_id", "A1", CT_carbonplay_VertexTypes.TAXONOMY);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode04 = createNode("A2_id", "A2", CT_carbonplay_VertexTypes.TAXONOMY);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode05 = createNode("B1_id", "B1", CT_carbonplay_VertexTypes.TAXONOMY);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode06 = createNode("B2_id", "B2", CT_carbonplay_VertexTypes.TAXONOMY);
 
-		PojoJGraphtTreeNode pojoJGraphtTreeNode10 = createNode("ya_id", "ya");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode11 = createNode("yb_id", "yb");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode12 = createNode("za_id",	"za");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode13 = createNode("zb_id",	"zb");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode14 = createNode("zc_id",	"zc");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode15 = createNode("C_id",	"C");
-		PojoJGraphtTreeNode pojoJGraphtTreeNode16 = createNode("D_id",	"D");
+		PojoJGraphtTreeNode pojoJGraphtTreeNode07 = createNode("x_id", 	"x", CT_carbonplay_VertexTypes.NORMAL);
+		
+		PojoJGraphtTreeNode pojoJGraphtTreeNode08 = createNode("y_id", 	"y", CT_carbonplay_VertexTypes.NORMAL); //these 2 nodes:  create the same payload (entityID = "y"),
+		PojoJGraphtTreeNode pojoJGraphtTreeNode09 = createNode("y_id", 	"y", CT_carbonplay_VertexTypes.NORMAL); //but for different TreeNode-iDs (to add "y_label" 1x to "A2" and  1x to "B1")
+
+		PojoJGraphtTreeNode pojoJGraphtTreeNode10 = createNode("ya_id", "ya",CT_carbonplay_VertexTypes.NORMAL);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode11 = createNode("yb_id", "yb",CT_carbonplay_VertexTypes.NORMAL);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode12 = createNode("za_id",	"za",CT_carbonplay_VertexTypes.NORMAL);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode13 = createNode("zb_id",	"zb",CT_carbonplay_VertexTypes.NORMAL);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode14 = createNode("zc_id",	"zc",CT_carbonplay_VertexTypes.NORMAL);
+
+		PojoJGraphtTreeNode pojoJGraphtTreeNode15 = createNode("C_id",	"C",CT_carbonplay_VertexTypes.TAXONOMY);
+		PojoJGraphtTreeNode pojoJGraphtTreeNode16 = createNode("D_id",	"D",CT_carbonplay_VertexTypes.TAXONOMY);
 
 		
         // ==========================================
@@ -104,14 +107,16 @@ public class SimpleDummyDataGenerator {
 	 * This method creates a Graph-Vertex ( = PojoJGraphtTreeNode ) which holds a payload with entity - information
 	 * @param objectId ID of the Object
 	 * @param objectLabel Label of the Object
+	 * @param vertexType Code taken from CT_carbonplay_VertexTypes
 	 * @return
 	 */
-	private static PojoJGraphtTreeNode createNode(String objectId, String objectLabel) {
+	private static PojoJGraphtTreeNode createNode(String objectId, String objectLabel, String vertexType) {
 		
 		//What is an entity ... PojoEntityPayload is the payload, which answers this question 
 		PojoSimpleObjectPayload pojoObjectPayload = new PojoSimpleObjectPayload();
-		pojoObjectPayload.setObjectID(objectId);
-		pojoObjectPayload.setObjectLabel(objectLabel);
+		pojoObjectPayload.setId(objectId);
+		pojoObjectPayload.setName(objectLabel);
+		pojoObjectPayload.setVertexType(vertexType);
 		
 		PojoPayloadUiControl pojoPayloadUiControl = new PojoPayloadUiControl();
 				

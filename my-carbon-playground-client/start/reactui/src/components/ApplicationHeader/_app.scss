@@ -42,3 +42,25 @@
     padding-right: 30px;
   }
   
+
+/* ************************************************************************ */ 
+/*  Tree View
+/* ************************************************************************ */ 
+.thisApp_Tree_Entry {
+    font-size: 95%;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  
+  .thisApp_Tree_Button {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    min-height: auto !important;       /* optional: noch kompakter */
+    line-height: 1 !important;         /* optional: engerer Textfluss */
+    font-size: 80% !important;
+    border: none !important;
+    box-shadow: none !important;
+  } 

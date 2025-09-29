@@ -1,0 +1,31 @@
+{
+  "id": 102,
+  "tableName": "VertexTypes",	
+  "codeTableItems": [
+
+    {
+      "code": "NORMAL",
+      "language": "en",
+      "value": "Normal",
+      "enabled": true,
+      "java_identifier": "NORMAL"
+    },
+    {
+      "code": "NORMAL",
+      "language": "de",
+      "value": "Normal"
+    },
+	{
+	  "code": "TAXONOMY",
+	  "language": "en",
+	  "value": "Taxonomy",
+	  "enabled": true,
+	  "java_identifier": "TAXONOMY"
+	},
+	{
+	  "code": "TAXONOMY",
+	  "language": "de",
+	  "value": "Taxonomie"
+	}
+  ]
+}

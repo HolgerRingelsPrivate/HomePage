@@ -78,6 +78,18 @@
       "code": "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY",
       "language": "de",
       "value": "Baum (bef\u00fcllt vom Verzeichnis Erkl\u00e4rungen)"
+    },
+    {
+      "code": "EXAMPLE_TREE_FEATURED_UI",
+      "language": "en",
+      "value": "Tree (with handling options)",
+      "enabled": true,
+      "java_identifier": "EXAMPLE_TREE_FEATURED_UI"
+    },
+    {
+      "code": "EXAMPLE_TREE_FEATURED_UI",
+      "language": "de",
+      "value": "Baum (mit Hantierungen)"
     }
 
         

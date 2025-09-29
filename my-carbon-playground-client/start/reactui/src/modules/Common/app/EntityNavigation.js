@@ -92,6 +92,15 @@ class EntityNavigation extends Component {
               >
               </TreeNode>
 
+              <TreeNode
+                id={CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FEATURED_UI}
+                label={CT_carbonplay_TopicsAndExamples.getTextForCode(CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FEATURED_UI)}
+                value=""
+                isExpanded={true}
+                renderIcon={Demo}
+                onSelect={this.toggleUi.bind(this, CT_carbonplay_TopicsAndExamples.CODE.JS_EXAMPLE_TREE_FEATURED_UI)}
+              >
+              </TreeNode>
 
             </TreeNode>
 

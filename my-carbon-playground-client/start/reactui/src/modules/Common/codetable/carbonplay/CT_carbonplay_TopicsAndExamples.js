@@ -8,6 +8,7 @@ export const CODE = {
   JS_EXAMPLE_TREE_BACKEND_FILLED_1: "EXAMPLE_TREE_BACKEND_FILLED_1",
   JS_EXAMPLE_TREE_BACKEND_FILLED_2: "EXAMPLE_TREE_BACKEND_FILLED_2",
   JS_EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY: "EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY",
+  JS_EXAMPLE_TREE_FEATURED_UI: "EXAMPLE_TREE_FEATURED_UI",
 }
 
 
@@ -131,6 +132,10 @@ export function getUiItems_en () {
         text: 'Tree (filled from Explain-Directory)'
       }, 
       {
+        code: 'EXAMPLE_TREE_FEATURED_UI',
+        text: 'Tree (with handling options)'
+      }, 
+      {
         code: '',
         text: ''
       }
@@ -169,6 +174,10 @@ export function getUiItems_de () {
       {
         code: 'EXAMPLE_TREE_FROM_EXPLAIN_DIRECTORY',
         text: 'Baum (befüllt vom Verzeichnis Erklärungen)'
+      }, 
+      {
+        code: 'EXAMPLE_TREE_FEATURED_UI',
+        text: 'Baum (mit Hantierungen)'
       }, 
       {
         code: '',

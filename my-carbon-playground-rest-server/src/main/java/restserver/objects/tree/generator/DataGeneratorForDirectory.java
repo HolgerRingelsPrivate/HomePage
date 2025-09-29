@@ -7,10 +7,11 @@ import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
 
 import common.utils.StringUtils;
-import common.utils.jgrapht.helper.JGraphTParentChildrenPopulator;
 import common.utils.jgrapht.pojo.PojoJGraphtTreeNode;
 import common.utils.jgrapht.pojo.PojoPayloadUiControl;
+import common.utils.jgrapht.transformer.JGraphTParentChildrenPopulator;
 import restserver.objects.tree.object.payload.PojoFilePayload;
+import server.app.model.codetable.CT_carbonplay_VertexTypes;
 
 public class DataGeneratorForDirectory {
 
@@ -135,6 +136,12 @@ public class DataGeneratorForDirectory {
 			pojoFilePayload.setFlagIsHidden(f.isHidden());
 			pojoFilePayload.setLastModified(f.lastModified());
 			pojoFilePayload.setLength(f.length());
+			
+			if (f.isDirectory()) {
+				pojoFilePayload.setVertexType(CT_carbonplay_VertexTypes.TAXONOMY);
+			} else {
+				pojoFilePayload.setVertexType(CT_carbonplay_VertexTypes.NORMAL);
+			}
 		}
 		return pojoFilePayload;
 	}

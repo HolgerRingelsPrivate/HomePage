@@ -5,7 +5,7 @@ const CONSTANTS = {
     ENDPOINT: 'Example/Tree/Direct/Example'
 }
 
-import type { PojoJGraphtTreeNode, PojoJGraphtTreeNodeList } from '../../../Common/types/PojoJGraphtTreeNode';
+import type { PojoJGraphtTreeNode, PojoJGraphtTreeNodeList } from '../../../Common/core/TreeView/PojoJGraphtTreeNode';
 
 /**
  * This method delivers a tree
